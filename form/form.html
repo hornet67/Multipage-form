@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multipage form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+	<div class="container">
+		<form id="form1">
+			<h3><center>Create Account</center></h3>
+			<input type="text" name="name" placeholder="Name" required>
+			<input type="text" name="mail" placeholder="Email" required>
+			<input type="password" name="pass" placeholder="Password" required>
+			<input type="password" name="pass" placeholder="Confirm password" required>
+
+
+			<div class="button">
+				<button type="button" id="Next1"> Next</button>
+			</div>
+
+		</form>
+
+
+		<form id="form2">
+			<h3><center>Personal Information</center></h3>
+			<input type="text" name="name" placeholder="First Name" required>
+			<input type="text" name="name" placeholder="Last Name" required>
+			<input type="text" name="pass" placeholder="MObile No" required>
+			<input type="text" name="pass" placeholder="Address" required>
+			
+
+
+			<div class="button">
+				<button type="button" id="Back1"> Back </button>
+				<button type="button" id="Next2">Next</button>
+			</div> 
+		</form>
+
+
+		<form id="form3">
+			<h3><center>Social Link</center></h3>
+			<input type="text" placeholder="Linkdin"> 
+			<input type="text" placeholder="Github"> 
+			<input type="text" placeholder="Instragram"> 
+			<input type="text" placeholder="Facebook">
+
+
+
+			<div class="button">
+				<button type="button" id="Back2"> Back</button>
+				<button type="Submit"> Submit</button>
+			</div>
+
+		</form>
+
+
+		<div class="step-row">
+			<div class="step-row"> 
+			<div id="progress"></div>
+			<div class="step-col"><small>Step 1</small></div>
+			<div class="step-col"><small>Step 2</small></div>
+			<div class="step-col"><small>Step 3</small></div>
+
+		</div>
+
+		
+
+	</div>
+
+
+
+
+
+<script>
+	var form1 =document.getElementById('form1');
+	var form2 =document.getElementById('form2');
+	var form3 =document.getElementById('form3');
+
+
+	var Next1 = document.getElementById('Next1');
+	var Next2 = document.getElementById('Next2');
+	var Back1 = document.getElementById('Back1');
+	var Back2 = document.getElementById('Back2');
+
+	var progress = document.getElementById('progress');
+
+	Next1.onclick = function(){
+		form1.style.left = '-450px';
+		form2.style.left = '40px';
+		progress.style.width = '240px'; 
+	}
+
+	 Back1.onclick = function(){
+	 	form1.style.left = '40px';
+	 	form2.style.left = '450px';
+	 	progress.style.width = '120px';
+	 }
+
+
+Next2.onclick = function(){
+		form2.style.left = '-450px';
+		form3.style.left = '40px';
+		progress.style.width = '360px';
+	}
+
+Back2.onclick = function(){
+	 	form2.style.left = '40px';
+	 	form3.style.left = '450px';
+	 	progress.style.width = '240px';
+	 }
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
